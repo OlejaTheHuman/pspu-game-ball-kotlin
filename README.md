@@ -35,6 +35,12 @@ app/build/outputs/apk/debug/app-debug.apk
 
 ## Web Demo
 
+Live demo:
+
+```text
+https://pspuballgame.vercel.app/
+```
+
 The browser version is a standalone HTML Canvas game stored in:
 
 ```text
