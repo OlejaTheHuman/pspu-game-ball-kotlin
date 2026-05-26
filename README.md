@@ -42,3 +42,14 @@ docs/index.html
 ```
 
 For GitHub Pages, publish the site from the `main` branch and the `/docs` folder, or use the included GitHub Actions workflow.
+
+Expected Pages URL:
+
+```text
+https://olejathehuman.github.io/pspu-game-ball-kotlin/
+```
+
+If the page is not live yet, open repository settings on GitHub, go to `Pages`, and select either:
+
+- `Deploy from a branch`: branch `main`, folder `/docs`
+- `GitHub Actions`: use the included workflow
