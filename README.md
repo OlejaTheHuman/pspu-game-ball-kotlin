@@ -32,3 +32,13 @@ The generated APK will also appear in:
 ```text
 app/build/outputs/apk/debug/app-debug.apk
 ```
+
+## Web Demo
+
+The browser version is a standalone HTML Canvas game stored in:
+
+```text
+docs/index.html
+```
+
+For GitHub Pages, publish the site from the `main` branch and the `/docs` folder, or use the included GitHub Actions workflow.

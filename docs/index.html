@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>PSPU Ball Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="game-shell" aria-label="PSPU Ball Game">
+        <canvas id="gameCanvas"></canvas>
+
+        <div class="top-panel">
+            <div>
+                <p class="game-title">PSPU Ball Game</p>
+                <p class="game-subtitle">Canvas edition</p>
+            </div>
+            <div class="hud">
+                <span id="blocksCounter">Blocks: 0</span>
+                <span id="ballsCounter">Balls: 0</span>
+            </div>
+        </div>
+
+        <button id="restartButton" class="restart-button" type="button">Restart</button>
+    </main>
+
+    <script src="game.js"></script>
+</body>
+</html>

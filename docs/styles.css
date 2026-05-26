@@ -1,0 +1,146 @@
+:root {
+    color-scheme: dark;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #141923;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: #141923;
+}
+
+body {
+    overscroll-behavior: none;
+    touch-action: none;
+}
+
+.game-shell {
+    position: fixed;
+    inset: 0;
+    min-width: 320px;
+    min-height: 520px;
+    background: #141923;
+}
+
+#gameCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.top-panel {
+    position: absolute;
+    top: max(14px, env(safe-area-inset-top));
+    left: max(14px, env(safe-area-inset-left));
+    right: max(14px, env(safe-area-inset-right));
+    z-index: 2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    pointer-events: none;
+}
+
+.game-title,
+.game-subtitle {
+    margin: 0;
+    line-height: 1.2;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+.game-title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.game-subtitle {
+    margin-top: 3px;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 13px;
+}
+
+.hud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+    max-width: 50%;
+}
+
+.hud span {
+    min-width: 86px;
+    padding: 7px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 8px;
+    background: rgba(12, 16, 24, 0.58);
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    backdrop-filter: blur(12px);
+}
+
+.restart-button {
+    position: absolute;
+    left: 50%;
+    bottom: max(28px, env(safe-area-inset-bottom));
+    z-index: 3;
+    display: none;
+    min-width: 178px;
+    height: 46px;
+    transform: translateX(-50%);
+    border: 0;
+    border-radius: 8px;
+    background: #50b4ff;
+    color: #07111a;
+    font-size: 16px;
+    font-weight: 800;
+    box-shadow: 0 12px 30px rgba(80, 180, 255, 0.28);
+    cursor: pointer;
+}
+
+.restart-button:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+
+.restart-button.visible {
+    display: block;
+}
+
+@media (max-width: 520px) {
+    .top-panel {
+        align-items: flex-start;
+    }
+
+    .game-title {
+        font-size: 16px;
+    }
+
+    .game-subtitle {
+        font-size: 12px;
+    }
+
+    .hud {
+        flex-direction: column;
+        align-items: flex-end;
+        max-width: 54%;
+        gap: 6px;
+    }
+
+    .hud span {
+        min-width: 86px;
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+}
